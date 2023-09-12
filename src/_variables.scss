@@ -1,0 +1,47 @@
+// Common CSS Variables
+
+// Colors
+$colorPrimary: #333333;
+$colorSecondary: rgb(61, 61, 61);
+$colorBackground: #d4d4d4;
+$colorReceipt: #ededed;
+$colorInputBorder: rgb(207, 207, 207);
+$colorRegister: rgb(240, 239, 200);
+$colorScreen: rgb(16, 150, 16);
+$colorOutline: rgb(163, 163, 163);
+
+// Fonts
+$fontPrimary: 'Amiko';
+$fontPrimaryBold: 'Amiko-Bold';
+$fontSecondary: 'OCRA';
+$fontTertiary: 'LCD';
+
+// Dimensions
+$navHeight: 4rem;
+$contentHeight: calc(100svh - $navHeight - 15rem);
+$thirdHeight: 100%;
+$thirdWidth: 33%;
+$sectionWidth: 100%;
+$sectionHeight: 8rem;
+
+
+// Font Setup
+@font-face {
+  font-family: 'Amiko';
+  src: url('/assets/fonts/Amiko-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Amiko-Bold';
+  src: url('/assets/fonts/Amiko-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'OCRA';
+  src: url('/assets/fonts/OCRA.ttf');
+}
+
+@font-face {
+  font-family: 'LCD';
+  src: url('/assets/fonts/digital-7.ttf');
+}

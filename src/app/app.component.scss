@@ -1,0 +1,146 @@
+@import '../_variables.scss';
+
+.navbar {
+  background-color: $colorPrimary;
+  height: 4rem;
+  font-family: 'Amiko-Bold';
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 2rem;
+}
+
+.content {
+  height: $contentHeight;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 2rem;
+}
+
+.third {
+  width: $thirdWidth;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.thirdContent {
+  width: 100%;
+  background-color: $colorReceipt;
+  min-height: 30rem;
+}
+
+.thirdTitle {
+  text-align: center;
+  padding-bottom: 1rem;
+  margin: 0 2rem 1rem 2rem;
+  font-family: $fontSecondary;
+  font-weight: bold;
+  border-bottom: 1px dashed $colorPrimary;
+}
+
+.receipt {
+  width: 100%;
+}
+
+.receiptRow {
+  font-family: $fontSecondary !important;
+  font-size: 0.75rem !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.result {
+  margin-left: auto;
+}
+
+.section {
+  margin-bottom: 2rem;
+  position: relative;
+  color: $colorSecondary;
+  font-size: 0.75rem;
+  padding: 0 2rem 0 2rem;
+}
+
+.sectionTitle {
+  font-family: $fontPrimaryBold;
+  color: $colorPrimary;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.sectionInput {
+  font-family: $fontPrimary;
+  height: 1.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  white-space: pre;
+}
+
+#salaryInput {
+  height: 100%;
+  border: 1px solid $colorInputBorder;
+}
+
+.sectionResult {
+  font-family: $fontPrimary;
+  height: 1.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  white-space: pre;
+}
+
+.screen {
+  width: 80%;
+  background-color: black;
+  outline: 1px solid $colorOutline;
+  border: 1rem solid $colorRegister;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.screenTitle, .screenInput {
+  font-family: $fontTertiary;
+  font-size: 2rem;
+  color: $colorScreen;
+}
+
+.screenTitle {
+  height: 2rem;
+}
+
+.screenInput {
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  line-height: 2.5rem;
+}
+
+.screenInput:focus {
+  outline: none;
+}
+
+.screenInput::-webkit-outer-spin-button,
+.screenInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.screenInput[type=number] {
+  -moz-appearance: textfield;
+}
