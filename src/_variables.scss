@@ -6,15 +6,20 @@ $colorSecondary: rgb(61, 61, 61);
 $colorBackground: #d4d4d4;
 $colorReceipt: #ededed;
 $colorInputBorder: rgb(207, 207, 207);
-$colorRegister: rgb(240, 239, 200);
-$colorScreen: rgb(16, 150, 16);
-$colorOutline: rgb(163, 163, 163);
+// $colorRegister: rgb(226, 223, 176);
+// $colorScreen: #000000;
+// $colorDigits: rgb(0, 155, 8);
+$colorOutline: rgba(163, 163, 163, 0.555);
+$colorInputBG: rgb(238, 234, 230);
+$colorInputBorder: #333333;
 
 // Fonts
 $fontPrimary: 'Amiko';
 $fontPrimaryBold: 'Amiko-Bold';
 $fontSecondary: 'OCRA';
 $fontTertiary: 'LCD';
+$fontQuartile: 'Quiche Sans';
+$fontQuintile: 'MrEaves';
 
 // Dimensions
 $navHeight: 4rem;
@@ -44,4 +49,14 @@ $sectionHeight: 8rem;
 @font-face {
   font-family: 'LCD';
   src: url('/assets/fonts/digital-7.ttf');
+}
+
+@font-face {
+  font-family: 'Quiche Sans';
+  src: url('/assets/fonts/quichesans-medium.ttf');
+}
+
+@font-face {
+  font-family: 'MrEaves';
+  src: url('/assets/fonts/MrEaves.ttf');
 }

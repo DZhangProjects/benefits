@@ -15,14 +15,36 @@
 .content {
   height: $contentHeight;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 2rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media (min-width: 1000px) {
+  .content {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 1rem 0 1rem;
+  }
+
+  .third {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1450px) {
+  .content {
+    padding: 2rem 4rem 0 4rem;
+  }
+
+  .third {
+    width: $thirdWidth;
+  }
 }
 
 .third {
-  width: $thirdWidth;
+  width: 80%;
   padding: 1rem;
   position: relative;
   display: flex;
@@ -103,44 +125,113 @@
   white-space: pre;
 }
 
-.screen {
-  width: 80%;
-  background-color: black;
-  outline: 1px solid $colorOutline;
-  border: 1rem solid $colorRegister;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  margin-bottom: 2rem;
+// .screen {
+//   width: 80%;
+//   background-color: $colorScreen;
+//   outline: 1px solid $colorOutline;
+//   border: 1rem solid $colorRegister;
+//   border-radius: 0.5rem;
+//   padding: 0.5rem;
+//   margin-bottom: 2rem;
+// }
+
+// .screenTitle, .screenInput {
+//   font-family: $fontTertiary;
+//   font-size: 2rem;
+//   color: $colorDigits;
+// }
+
+// .screenTitle {
+//   height: 2rem;
+// }
+
+// .screenInput {
+//   border: none;
+//   background-color: transparent;
+//   margin: 0;
+//   padding: 0;
+//   line-height: 2.5rem;
+// }
+
+// .screenInput:focus {
+//   outline: none;
+// }
+
+// .screenInput::-webkit-outer-spin-button,
+// .screenInput::-webkit-inner-spin-button {
+//   -webkit-appearance: none;
+//   margin: 0;
+// }
+
+// .screenInput[type=number] {
+//   -moz-appearance: textfield;
+// }
+
+// .phone {
+//   width: clamp(300px, 70%, 100rem);
+//   position: absolute;
+// }
+
+.plate {
+  position: absolute;
+  width: 110%;
+  z-index: 2;
 }
 
-.screenTitle, .screenInput {
-  font-family: $fontTertiary;
-  font-size: 2rem;
-  color: $colorScreen;
+.menu {
+  position: absolute;
+  top: 15%;
+  width: 20%;
+  z-index: 4;
 }
 
-.screenTitle {
-  height: 2rem;
+.queryBox {
+  width: calc(70% - 2rem - min(2vw, 2vh));
+  min-height: 35vh;
+  background-color: $colorInputBG;
+  border-radius: 3px;
+  padding: clamp(20px, 25vh, 30%) 1rem 1rem 1rem;
+  font-family: $fontQuartile;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  letter-spacing: 0.3rem;
+  box-shadow: 2px 2px 2px $colorOutline;
 }
 
-.screenInput {
+@media (min-width: 1000px) {
+  .queryBox {
+    padding-top: 11vw;
+  }
+}
+
+.query {
+  padding-bottom: 3rem;
+}
+
+.queryTitle {
+  text-align: center;
+}
+
+.queryRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.queryInput {
   border: none;
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
-  line-height: 2.5rem;
+  border-bottom: 1px solid $colorOutline;
+  text-align: center;
+  font-family: $fontQuintile;
+  letter-spacing: 0.2rem;
+  background-color: $colorInputBG;
 }
 
-.screenInput:focus {
+.queryInput:focus {
   outline: none;
-}
-
-.screenInput::-webkit-outer-spin-button,
-.screenInput::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.screenInput[type=number] {
-  -moz-appearance: textfield;
 }
