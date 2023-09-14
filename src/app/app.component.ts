@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FinancialProfile } from './models/FinancialProfile';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CACI Benefits Calculator';
+
+  public salaryInput!: number;
+  public retirementInput!: number;
+  public ibaInput!: number;
+  public ageInput!: number;
+
+  public financialProfile!: FinancialProfile;
+
 
 }
