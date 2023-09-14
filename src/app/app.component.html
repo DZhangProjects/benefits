@@ -22,7 +22,7 @@
             Annual Salary
           </div>
           <div class="queryRow">
-            <input class="queryInput" />
+            <input class="queryInput" [(ngModel)]="salaryInput" />
           </div>
         </div>
 
@@ -32,17 +32,7 @@
             Individual 401k Contribution
           </div>
           <div class="queryRow">
-            <input class="queryInput" />
-          </div>
-        </div>
-
-
-        <div class="query">
-          <div class="queryTitle">
-            IBA Payout
-          </div>
-          <div class="queryRow">
-            <input class="queryInput" />
+            <input class="queryInput" [(ngModel)]="retirementInput" />
           </div>
         </div>
 
@@ -52,12 +42,32 @@
             Age
           </div>
           <div class="queryRow">
-            <input class="queryInput" />
+            <input class="queryInput" [(ngModel)]="ageInput" />
           </div>
         </div>
 
 
-        <div class="btn">
+        <div class="query">
+          <div class="queryTitle">
+            Days of PTO Used
+          </div>
+          <div class="queryRow">
+            <input class="queryInput" [(ngModel)]="ptoInput" />
+          </div>
+        </div>
+
+
+        <div class="query">
+          <div class="queryTitle">
+            Out of Pocket Costs
+          </div>
+          <div class="queryRow">
+            <input class="queryInput" [(ngModel)]="oopInput" />
+          </div>
+        </div>
+
+
+        <div class="btn" (click)="updateBenefits()">
           Order
         </div>
 
@@ -105,43 +115,43 @@
         <div class="section">
           <div class="sectionTitle receiptRow">
             <div>Taxable Income</div>
-            <div class="result">100,000</div>
+            <div class="result plus">{{ oldBenefits ? oldBenefits.taxableIncome : 0}}</div>
           </div>
           <div class="sectionTitle receiptRow">
             <div>Income Tax</div>
-            <div class="result">-22,000</div>
+            <div class="result minus">{{ oldBenefits ? oldBenefits.incomeTax * -1 : 0}}</div>
           </div>
         </div>
 
         <div class="section sectionEnd">
           <div class="sectionTitle receiptRow">
             <div>IBA Payout</div>
-            <div class="result">25,000</div>
+            <div class="result plus">{{ oldBenefits ? oldBenefits.ibaPayout : 0}}</div>
           </div>
           <div class="sectionTitle receiptRow">
             <div>Bonus Tax</div>
-            <div class="result">-10,000</div>
+            <div class="result minus">{{ oldBenefits ? oldBenefits.bonusTax * -1 : 0}}</div>
           </div>
         </div>
 
         <div class="section">
           <div class="sectionTitle receiptRow sectionTitleBold">
             <div>Subtotal</div>
-            <div class="result">93,000</div>
+            <div class="result">{{ oldBenefits ? oldBenefits.takehomePay : 0}}</div>
           </div>
         </div>
 
         <div class="section">
           <div class="sectionTitle receiptRow">
             <div>401K</div>
-            <div class="result">47,000</div>
+            <div class="result plus">{{ oldBenefits ? oldBenefits.retirementContribution : 0}}</div>
           </div>
         </div>
 
         <div class="section">
           <div class="sectionTitle receiptRow sectionTitleBold">
             <div>Total Value</div>
-            <div class="result">140,000</div>
+            <div class="result">{{ oldBenefits ? oldBenefits.totalValue : 0}}</div>
           </div>
         </div>
 
@@ -168,43 +178,43 @@
         <div class="section">
           <div class="sectionTitle receiptRow">
             <div>Taxable Income</div>
-            <div class="result">100,000</div>
+            <div class="result">{{ newBenefits ? newBenefits.taxableIncome : 0}}</div>
           </div>
           <div class="sectionTitle receiptRow">
             <div>Income Tax</div>
-            <div class="result">-22,000</div>
+            <div class="result">{{ newBenefits ? newBenefits.incomeTax : 0}}</div>
           </div>
         </div>
 
         <div class="section sectionEnd">
           <div class="sectionTitle receiptRow">
             <div>IBA Payout</div>
-            <div class="result">25,000</div>
+            <div class="result">{{ newBenefits ? newBenefits.ibaPayout : 0}}</div>
           </div>
           <div class="sectionTitle receiptRow">
             <div>Bonus Tax</div>
-            <div class="result">-10,000</div>
+            <div class="result">{{ newBenefits ? newBenefits.bonusTax : 0}}</div>
           </div>
         </div>
 
         <div class="section">
           <div class="sectionTitle receiptRow sectionTitleBold">
             <div>Subtotal</div>
-            <div class="result">93,000</div>
+            <div class="result">{{ newBenefits ? newBenefits.takehomePay : 0}}</div>
           </div>
         </div>
 
         <div class="section">
           <div class="sectionTitle receiptRow">
             <div>401K</div>
-            <div class="result">47,000</div>
+            <div class="result">{{ newBenefits ? newBenefits.retirementContribution : 0}}</div>
           </div>
         </div>
 
         <div class="section">
           <div class="sectionTitle receiptRow sectionTitleBold">
             <div>Total Value</div>
-            <div class="result">140,000</div>
+            <div class="result">{{ newBenefits ? newBenefits.totalValue : 0}}</div>
           </div>
         </div>
 

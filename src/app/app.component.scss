@@ -53,6 +53,26 @@
   align-items: center;
 }
 
+.thirdMenu {
+  width: 80%;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.thirdReceipt {
+  width: 80%;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .thirdContent {
   width: 100%;
   background-color: $colorReceipt;
@@ -246,10 +266,11 @@
 
 .btn {
   margin-bottom: 0.24rem;
-  padding: 0.45rem 0.75rem 0.45rem .95rem;
+  padding: 0.25rem 0.55rem 0.25rem .75rem;
   border: 2px solid $colorPrimary;
   border-radius: 1px;
-  transform: skew(-20deg);
+  transform: skew(-30deg);
+  font-size: 0.5rem;
 }
 
 .btn:hover {
@@ -258,4 +279,16 @@
   color: white;
   // font-size: 1.2rem;
   // margin-bottom: 0;
+}
+
+.btn:active {
+  background-color: black;
+}
+
+.plus {
+  color: $colorGreen;
+}
+
+.minus {
+  color: $colorRed;
 }

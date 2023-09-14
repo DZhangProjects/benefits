@@ -7,16 +7,16 @@ export class FinancialProfile {
     public retirement: number;
     public incomeTax: number;
     public netSalary: number;
-    public iba: IBA;
+    // public iba: IBA;
     public relationshipStatus?: RelationshipStatus;
 
-    constructor(grossSalary: number, retirement: number, ibaPayout: number, age: number, relationshipStatus: RelationshipStatus = RelationshipStatus.single) {
+    constructor(grossSalary: number, retirement: number, age: number, relationshipStatus: RelationshipStatus = RelationshipStatus.single) {
         this.age = age;
         this.grossSalary = grossSalary;
-        this.retirement = Math.min(retirement, age >= 50 ? 30000 : 22500);
+        this.retirement = Math.min(retirement, age >= 50 ? 30000 : 22500, grossSalary);
         this.incomeTax = this.calculateIncomeTax(relationshipStatus);
         this.netSalary = this.calculateNetSalary(relationshipStatus);
-        this.iba = new IBA(0.25 * grossSalary, ibaPayout);
+        // this.iba = new IBA(0.25 * grossSalary, ptoUsed, oopCosts);
         this.relationshipStatus = relationshipStatus;
     }
 
