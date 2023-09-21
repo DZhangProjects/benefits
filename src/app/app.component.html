@@ -11,7 +11,54 @@
 
 
     <div class="third">
-      <img class="plate" src="../assets/images/plate.png" />
+
+      <div class="formBox">
+
+        <div class="inputBox">
+          <div class="inputTitleRow">
+            <div class="inputTitle">Annual Salary</div>
+          </div>
+          <input class="input" type="number" [(ngModel)]="salaryInput" />
+        </div>
+        
+        <div class="inputBox">
+          <div class="inputTitleRow">
+            <div class="inputTitle">Individual 401k Contribution</div>
+          </div>
+          <input class="input" type="number" id="input401k" [(ngModel)]="retirementInput" />
+        </div>
+        
+        <div class="inputBox">
+          <div class="inputTitleRow">
+            <div class="inputTitle">Age</div>
+          </div>
+          <input class="input" type="number" id="inputAge" [(ngModel)]="ageInput" />
+        </div>
+        
+        <div class="inputBox">
+          <div class="inputTitleRow">
+            <div class="inputTitle">Days of PTO Used</div>
+          </div>
+          <input class="input" type="number" [(ngModel)]="ptoInput" />
+        </div>
+        
+        <div class="inputBox">
+          <div class="inputTitleRow">
+            <div class="inputTitle">Out of Pocket Costs</div>
+          </div>
+          <input class="input" type="number" [(ngModel)]="oopInput" />
+        </div>
+
+
+
+        <div class="btnBox">
+          <div class="btnSubmit" (click)="updateBenefits()">Submit</div>
+        </div>
+
+
+      </div>
+
+      <!-- <img class="plate" src="../assets/images/plate.png" />
 
       <div class="queryBox">
 
@@ -71,7 +118,7 @@
           Order
         </div>
 
-      </div>
+      </div> -->
 
       <!-- <img class="phone" src="../assets/images/iphone.png" /> -->
 
@@ -150,7 +197,7 @@
 
         <div class="section">
           <div class="sectionTitle receiptRow sectionTitleBold">
-            <div>Total Value</div>
+            <div>Total Estimated Value</div>
             <div class="result">{{ oldBenefits ? oldBenefits.totalValue : 0}}</div>
           </div>
         </div>
@@ -178,22 +225,22 @@
         <div class="section">
           <div class="sectionTitle receiptRow">
             <div>Taxable Income</div>
-            <div class="result">{{ newBenefits ? newBenefits.taxableIncome : 0}}</div>
+            <div class="result plus">{{ newBenefits ? newBenefits.taxableIncome : 0}}</div>
           </div>
           <div class="sectionTitle receiptRow">
             <div>Income Tax</div>
-            <div class="result">{{ newBenefits ? newBenefits.incomeTax : 0}}</div>
+            <div class="result minus">{{ newBenefits ? newBenefits.incomeTax : 0}}</div>
           </div>
         </div>
 
         <div class="section sectionEnd">
           <div class="sectionTitle receiptRow">
             <div>IBA Payout</div>
-            <div class="result">{{ newBenefits ? newBenefits.ibaPayout : 0}}</div>
+            <div class="result plus">{{ newBenefits ? newBenefits.ibaPayout : 0}}</div>
           </div>
           <div class="sectionTitle receiptRow">
             <div>Bonus Tax</div>
-            <div class="result">{{ newBenefits ? newBenefits.bonusTax : 0}}</div>
+            <div class="result minus">{{ newBenefits ? newBenefits.bonusTax : 0}}</div>
           </div>
         </div>
 
@@ -207,13 +254,13 @@
         <div class="section">
           <div class="sectionTitle receiptRow">
             <div>401K</div>
-            <div class="result">{{ newBenefits ? newBenefits.retirementContribution : 0}}</div>
+            <div class="result plus">{{ newBenefits ? newBenefits.retirementContribution : 0}}</div>
           </div>
         </div>
 
         <div class="section">
           <div class="sectionTitle receiptRow sectionTitleBold">
-            <div>Total Value</div>
+            <div>Total Estimated Value</div>
             <div class="result">{{ newBenefits ? newBenefits.totalValue : 0}}</div>
           </div>
         </div>

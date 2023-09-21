@@ -292,3 +292,90 @@
 .minus {
   color: $colorRed;
 }
+
+// v2.0
+.formBox {
+  width: calc(100% - 6rem);
+  background-color: $colorReceipt;
+  box-shadow: 5px 5px rgb(165, 165, 165);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 3rem;
+}
+
+.inputBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.inputTitleRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 0.25rem;
+}
+
+.inputTitle {
+  font-family: $fontSecondary;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.input {
+  font-family: $fontQuintile;
+  letter-spacing: 0.2rem;
+  width: 45%;
+  height: 1.25rem;
+  border: 1px solid $colorOutline;
+  border-radius: 3px;
+  padding-left: 0.5rem;
+}
+
+#input401k {
+  width: 75%;
+}
+
+#inputAge {
+  width: 20%;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.btnBox {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnSubmit {
+  padding: 0.5rem 1rem 0.6rem 1rem;
+  border: 2px solid $colorPrimary;
+  border-radius: 5px;
+  font-family: $fontSecondary;
+  font-weight: bold;
+  font-size: 0.75rem;
+  background-color: $colorButton;
+}
+
+.btnSubmit:hover {
+  cursor: pointer;
+  background-color: $colorButtonHover;
+}
+
+.btnSubmit:active {
+  background-color: $colorButtonClick;
+}

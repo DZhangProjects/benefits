@@ -27,9 +27,11 @@ export class AppComponent {
    * Updates all Benefits data.
    */
   public updateBenefits(): void {
-    this.updateFinancialProfile();
-    this.updateOldBenefits();
-    this.updateNewBenefits();
+    if (this.ageInput) {
+      this.updateFinancialProfile();
+      this.updateOldBenefits();
+      this.updateNewBenefits();
+    }
   }
 
   public updateOldBenefits(): void {
